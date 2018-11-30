@@ -10,6 +10,6 @@ export class ShipsService {
   constructor(private _http: HttpClient) { }
 
   shipsFetch(searchValue: string) : Observable<any> {
-    return this._http.get<any>(`https://swapi.co/api/starships/?format=json&search=${searchValue}`)
+    return this._http.get<any>(`https://swapi.co/api/starships/?search=${searchValue}`)
   }
 }

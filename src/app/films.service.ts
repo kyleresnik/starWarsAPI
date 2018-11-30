@@ -10,6 +10,6 @@ export class FilmsService {
   constructor(private _http: HttpClient) { }
 
   filmsFetch(searchValue: string) : Observable<any> {
-    return this._http.get<any>(`https://swapi.co/api/films/?format=json&search=${searchValue}`)
+    return this._http.get<any>(`https://swapi.co/api/films/?search=${searchValue}`)
   }
 }
