@@ -12,7 +12,7 @@ import { ShipsService } from '../ships.service';
 export class SwapiDisplayComponent implements OnInit {
 
   displayForm: FormGroup;
-  public _result: any[] = [];
+  public _result: any[];
 
   searchValue = [
     { view: 'Films', value: 'films'},
