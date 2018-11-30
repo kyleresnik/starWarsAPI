@@ -1,3 +1,12 @@
-<p>
-  swapi-display works!
-</p>
+<form [formGroup]='displayForm' (ngSubmit)='submitSearch()'>
+  <select name='searchMenu' formControlName='searchMenu' id='searchMenu' required>
+    <option value=''></option>
+    <option *ngFor="let search of searchValue" value='{{ search.value }}'>{{ search.view }}</option>
+    <!-- <option *ngFor="let search of searchValue" value='ships'>Ships</option>
+    <option *ngFor="let search of searchValue" value='people'>People</option> -->
+  </select>
+  <input type='text' id='search' formControlName='searchValue' required>
+  <button type='submit'>Submit</button>
+</form>
+
+<p>{{ _result | json }}</p>
